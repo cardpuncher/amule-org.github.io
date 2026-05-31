@@ -20,23 +20,33 @@
 **Static site**: `src/pages/index.tsx` (orchestrator) → `src/components/` (section components) → Docusaurus build → GitHub Pages.
 
 **Key files**:
-- `docusaurus.config.ts` — site config, navbar, footer, i18n locales, theme
+- `docusaurus.config.ts` — site config, navbar, footer, i18n locales, theme, plugins (changelog blog instance)
 - `sidebars.ts` — docs sidebar definition
-- `src/pages/index.tsx` — homepage, composes all section components
+- `src/pages/index.tsx` — homepage, composes section components (Hero/What-is/screenshot inlined here)
+- `src/pages/download.tsx` — Download page (`/download`)
 - `src/components/<Name>/index.tsx` — one component per homepage section
 - `src/components/<Name>/styles.module.css` — scoped styles per component
 - `src/css/custom.css` — global CSS variable overrides (color palette)
 - `docs/` — English documentation (Markdown)
-- `i18n/es/` — Spanish translations (`code.json` for UI strings, mirrored `docs/` for content)
-- `static/img/` — images (`amule-logo.png`, `social-card.png`, `screenshots/`, `docs/`)
+- `blog/` — Blog posts (`/blog`); `changelog/` — Changelog posts (`/changelog`, second blog plugin instance)
+- `i18n/<locale>/` — translations (`code.json` for UI strings; mirrored `docs/`, `blog/`, `changelog/` for content)
+- `static/img/` — images (`amule-logo.png`, `social-card.png`, favicons, `screenshots/`, `docs/`)
+
+## Documentation
+
+`docsSidebar` (see `sidebars.ts`) opens with two standalone docs — Overview (`docs/index.md`) and Quick Start (`docs/quickstart-guide.md`) — then **four top-level categories** by audience. Keep them separate — never mix audiences.
+
+- **User Manual** (`docs/manual/`) — install, configure, use, troubleshoot; for basic and expert users. Subdivided into `installation/`, `interfaces/` (GUI under `gui/`, plus `amuled`/`amuleweb`/`amulecmd`), `configuration/` (network config + **editable text config files** in `files/`: `amule.conf`, `remote.conf`), `utilities/` (standalone helpers), `migration/`, `troubleshooting/`, `faq/`.
+- **Developer Guide** (`docs/developer/`) — for aMule developers and advanced integrators: code style, debugging, testing, **EC protocol**, compilation (`compilation/`), and the **binary file-format reference** (`file-formats/`: byte layouts of `.met`/`.dat` files).
+- **P2P Networks** (`docs/p2p-networks/`) — general eD2k (`ed2k/`) & Kademlia **protocol** description and historical reference. **Do not mix protocol with aMule's concrete implementation** — implementation details belong in the User Manual / Developer Guide and are linked, not embedded.
+- **Contributing** (`docs/contributing/`).
 
 ## Homepage Components
 
+The Hero (logo, tagline, CTA buttons), "What is aMule?" description and the full-width transfers screenshot are inlined in `src/pages/index.tsx`. The remaining sections are components:
+
 | Component | Section |
 |---|---|
-| `Hero` | Header with logo, version badge, CTA buttons |
-| `WhatIsAMule` | Project description |
-| `HeroScreenshot` | Full-width screenshot of the transfers tab |
 | `HighlightsSection` | 3.0.0 release highlights grid |
 | `FeaturesSection` | Bulleted feature list |
 | `ScreenshotsSection` | Screenshot grid with lightbox |
@@ -46,6 +56,7 @@
 - Default locale: `en`. Additional locale: `es`.
 - UI strings (React components): `i18n/<locale>/code.json` — each entry has `message` (translate this) and `description` (context, do not translate).
 - Docs content: `i18n/<locale>/docusaurus-plugin-content-docs/current/` mirrors `docs/`.
+- Blog/changelog content: `i18n/<locale>/docusaurus-plugin-content-blog/` mirrors `blog/`; `i18n/<locale>/docusaurus-plugin-content-blog-changelog/` mirrors `changelog/`.
 - Sidebar labels: `i18n/<locale>/docusaurus-plugin-content-docs/current/current.json`.
 - Add a new locale: register in `docusaurus.config.ts`, run `npm run write-translations -- --locale <code>`, then translate generated files.
 - Update translations after English changes: run `npm run write-translations -- --locale <code>` (adds new keys, preserves existing ones), then translate new entries in `code.json` and update changed docs files manually.

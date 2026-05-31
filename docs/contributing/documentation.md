@@ -12,13 +12,12 @@ amule-org.github.io/
 ├── docs/                        # English documentation (source of truth)
 │   ├── index.md                 # Docs landing page
 │   ├── quickstart-guide.md
-│   ├── user-guide/
-│   ├── ed2k/
-│   ├── development/
-│   ├── contributing/
-│   ├── troubleshooting/
-│   ├── faq/
-│   └── changelogs/
+│   ├── manual/                  # User Manual (install, configure, use, troubleshoot, FAQ)
+│   ├── developer/               # Developer Guide
+│   ├── p2p-networks/            # eD2k & Kademlia protocol reference
+│   └── contributing/
+├── blog/                        # Blog posts
+├── changelog/                   # Changelog (per-version release notes)
 ├── i18n/
 │   └── es/                      # Spanish translations
 │       ├── code.json            # UI strings (navbar, sidebar labels, etc.)
@@ -28,7 +27,7 @@ amule-org.github.io/
 │   └── img/
 │       └── docs/                # Images used in documentation pages
 ├── src/
-│   ├── pages/index.tsx          # Homepage
+│   ├── pages/                   # Homepage (index.tsx) and Download page (download.tsx)
 │   └── components/              # Homepage section components
 ├── sidebars.ts                  # Sidebar navigation structure
 └── docusaurus.config.ts         # Site configuration
@@ -83,12 +82,12 @@ The local dev server does not include the full-text search index. Search only wo
 3. Register the page in `sidebars.ts` so it appears in the sidebar. Find the relevant category and add the doc ID:
 
    ```ts
-   // Example: adding 'development/my-page' to the Development category
+   // Example: adding 'developer/my-page' to the Developer Guide category
    {
      type: 'category',
-     label: 'Development',
+     label: 'Developer Guide',
      items: [
-       'development/my-page',   // ← add this line
+       'developer/my-page',   // ← add this line
        ...
      ],
    }
@@ -100,7 +99,7 @@ The local dev server does not include the full-text search index. Search only wo
 
 To add a new subcategory with its own landing page:
 
-1. Create a new folder under `docs/` (e.g. `docs/development/new-section/`).
+1. Create a new folder under `docs/` (e.g. `docs/developer/new-section/`).
 
 2. Create an `index.md` inside it with the category title.
 
@@ -110,10 +109,10 @@ To add a new subcategory with its own landing page:
    {
      type: 'category',
      label: 'New Section',
-     link: { type: 'doc', id: 'development/new-section/index' },
+     link: { type: 'doc', id: 'developer/new-section/index' },
      items: [
-       'development/new-section/page-one',
-       'development/new-section/page-two',
+       'developer/new-section/page-one',
+       'developer/new-section/page-two',
      ],
    }
    ```
@@ -181,7 +180,7 @@ All images must have meaningful `alt` text for accessibility. Prefer PNG for scr
 **Internal links** — use relative paths to other `.md` files:
 
 ```markdown
-[Compilation guide](../development/compilation/index.md)
+[Compilation guide](../compilation/index.md)
 ```
 
 **External links** — use full URLs:
@@ -209,7 +208,7 @@ Use consistent terminology throughout the documentation:
 | `amulecmd` | `AMuleCMD`, `amule cmd` |
 | eD2k | ed2k (in prose) |
 | Kademlia | kad (in prose) |
-| HighID / LowID | [High ID, Low ID](../ed2k/high-id-low-id.md) |
+| HighID / LowID | [High ID, Low ID](../p2p-networks/high-id-low-id.md) |
 
 ## Translations
 

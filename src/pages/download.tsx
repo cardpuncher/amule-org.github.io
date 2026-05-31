@@ -166,7 +166,7 @@ export default function DownloadPage(): React.JSX.Element {
                   </Link>
                 ),
                 distros: (
-                  <Link to="/docs/user-guide/installation#distribution-packages">
+                  <Link to="/docs/manual/installation#distribution-packages">
                     <Translate id="homepage.download.distros.link">major Linux distributions</Translate>
                   </Link>
                 ),
@@ -180,7 +180,7 @@ export default function DownloadPage(): React.JSX.Element {
               id="homepage.download.install"
               values={{
                 install: (
-                  <Link to="/docs/user-guide/installation">
+                  <Link to="/docs/manual/installation">
                     <Translate id="homepage.download.install.guide.link">Installation guide</Translate>
                   </Link>
                 ),
@@ -199,7 +199,7 @@ export default function DownloadPage(): React.JSX.Element {
               id="homepage.download.compile"
               values={{
                 link: (
-                  <Link to="/docs/development/compilation">
+                  <Link to="/docs/developer/compilation">
                     <Translate id="homepage.download.compile.link">Compilation guide</Translate>
                   </Link>
                 ),

@@ -1,23 +1,55 @@
 {
-  "sidebar.docsSidebar.category.User Guide": {
-    "message": "Guía de usuario",
-    "description": "The label for category 'User Guide' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.User Manual": {
+    "message": "Manual de usuario",
+    "description": "The label for category 'User Manual' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Configuration": {
+    "message": "Configuración",
+    "description": "The label for category 'Configuration' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Files & directories": {
+    "message": "Ficheros y directorios",
+    "description": "The label for category 'Files & directories' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Interfaces": {
+    "message": "Interfaces",
+    "description": "The label for category 'Interfaces' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.GUI": {
+    "message": "GUI",
+    "description": "The label for category 'GUI' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Utilities": {
+    "message": "Utilidades",
+    "description": "The label for category 'Utilities' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Migration": {
     "message": "Migración",
     "description": "The label for category 'Migration' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.aMule Modules": {
-    "message": "Componentes de aMule",
-    "description": "The label for category 'aMule Modules' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Troubleshooting": {
+    "message": "Solución de problemas",
+    "description": "The label for category 'Troubleshooting' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.eD2k & Kademlia": {
-    "message": "eD2k y Kademlia",
-    "description": "The label for category 'eD2k & Kademlia' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category 'FAQ' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Development": {
-    "message": "Desarrollo",
-    "description": "The label for category 'Development' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.P2P Networks": {
+    "message": "Redes P2P",
+    "description": "The label for category 'P2P Networks' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Developer Guide": {
+    "message": "Guía de Desarrollador",
+    "description": "The label for category 'Developer Guide' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Compilation": {
+    "message": "Compilación",
+    "description": "The label for category 'Compilation' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.File Formats": {
+    "message": "Formatos de ficheros",
+    "description": "The label for category 'File Formats' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Contributing": {
     "message": "Contribuir",
@@ -31,44 +63,16 @@
     "message": "Inicio rápido",
     "description": "The label for the doc item 'Quick Start' in sidebar 'docsSidebar', linking to the doc quickstart-guide"
   },
-  "sidebar.docsSidebar.doc.Troubleshooting": {
-    "message": "Solución de problemas",
-    "description": "The label for the doc item 'Troubleshooting' in sidebar 'docsSidebar', linking to the doc troubleshooting/index"
-  },
-  "sidebar.docsSidebar.category.Troubleshooting": {
-    "message": "Solución de problemas",
-    "description": "The label for category 'Troubleshooting' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.doc.FAQ": {
-    "message": "FAQ",
-    "description": "The label for the doc item 'FAQ' in sidebar 'docsSidebar', linking to the doc faq/index"
-  },
-  "sidebar.docsSidebar.category.FAQ": {
-    "message": "FAQ",
-    "description": "The label for category 'FAQ' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.doc.Changelogs": {
-    "message": "Historial de cambios",
-    "description": "The label for the doc item 'Changelogs' in sidebar 'docsSidebar', linking to the doc changelogs/index"
-  },
   "version.label": {
     "message": "Actual",
     "description": "The label for version current"
   },
-  "sidebar.docsSidebar.category.Configuration": {
-    "message": "Configuración",
-    "description": "The label for category 'Configuration' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.eD2k Network": {
+    "message": "Red eD2k",
+    "description": "The label for category 'eD2k Network' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Usage": {
-    "message": "Uso",
-    "description": "The label for category 'Usage' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.aMule Files": {
-    "message": "Archivos de aMule",
-    "description": "The label for category 'aMule Files' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Compilation": {
-    "message": "Compilación",
-    "description": "The label for category 'Compilation' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.doc.Installation": {
+    "message": "Instalación",
+    "description": "The label for the doc item 'Installation' in sidebar 'docsSidebar', linking to the doc manual/installation/index"
   }
 }
